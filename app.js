@@ -11,6 +11,7 @@ const titleSpace = document.querySelector("#titleSpace");
 const amountTwo = document.querySelector("#amountTwo");
 const aboutExpenses = document.querySelector(".aboutExpenses");
 const expense = document.querySelector("#expense");
+const balanceText=document.querySelector("#balance")
 // const tr = document.querySelector("tbody");
 // console.log(tr);
 console.log(expense);
@@ -29,6 +30,7 @@ sectionIncome.addEventListener("submit", function (e) {
   const sumOfIncome = incomeArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
   console.log(sumOfIncome);   
   incomeText.innerText = sumOfIncome;
+  updateBalance()
 });
 resetBtn.addEventListener("click", function () {
   console.log("clicked");
@@ -63,8 +65,8 @@ divisionExpenses.addEventListener("submit", function (e) {
 expenses.forEach((exp) => {
   const expenseHtml = `
     <div class="title-1">
-      <h4>Expense: ${exp.name}</h4>
-      <h4>Amount: ${exp.value}</h4>
+      <h4>${exp.name}</h4>
+      <h4>${exp.value}</h4>
     </div>
   `;
   
@@ -75,5 +77,14 @@ aboutExpenses.innerHTML = allExpenseHtml;
 
   amountTwo.value = "";
   titleSpace.value = "";
+  updateBalance()
 });
+function updateBalance() {
+  const sumOfIncome = incomeArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+  const sumOfExpenses = expenseArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+  const balance = sumOfIncome - sumOfExpenses;
+  balanceText.innerText = balance;
+  console.log(balance);
+}
+updateBalance()
 

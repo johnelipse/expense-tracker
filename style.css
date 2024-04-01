@@ -136,9 +136,8 @@ body {
 }
 .section-content .section-expenses .title-1 {
   display: flex;
-  gap: 9rem;
+  gap: 12rem;
   margin-top: 1rem;
-  align-items: center;
 }
 .section-content .section-expenses .title-2 {
   display: flex;
