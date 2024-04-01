@@ -16,11 +16,11 @@
     </div>
     <section class="section-content">
       <h1>EXPENSE TRACKER</h1>
-      <div class="section-income">
+      <form class="section-income">
         <div class="div-form">
           <h3>Please Enter Your Income</h3>
           <h5>Click reset to reset income to zero (0).</h5>
-          <input type="number" placeholder="Enter Amount" />
+          <input class="amount-value" type="number" placeholder="Enter Amount" />
           <div class="btns">
             <button class="calculateBtn btn-1" id="calculateBtn">
               Calculate
@@ -32,7 +32,7 @@
           <div class="income">
             <h3>INCOME</h3>
             <i class="bx bx-money"></i>
-            <h1 id="income">0</h1>
+            <h1 id="income-text">0</h1>
           </div>
           <div class="income">
             <h3>EXPENSES</h3>
@@ -45,27 +45,52 @@
             <h1 id="balance">0</h1>
           </div>
         </div>
-      </div>
+      </form>
       <div class="section-expenses">
-        <div class="division-expenses">
+        <form class="division-expenses">
           <div class="title">
             <label for="text">Please Enter Your Expense Title</label>
-            <input type="text" placeholder="Enter expense Title" />
+            <input type="text" id="titleSpace" placeholder="Enter expense Title" />
           </div>
           <div class="title">
             <label for="text">Please Enter Your Expense Amount</label>
-            <input type="number" placeholder="Enter expense Amount" />
+            <input type="number" id="amountTwo" placeholder="Enter expense Amount" />
           </div>
           <button id="addExpense" class="addExpense">Add Expense</button>
-        </div>
-        <div class="aboutExpenses">
+        </form>
+        <table >
+          <thead >
+            <tr class="tr">
+              <th class="title">Expense Title</th>
+              <th class="title">Expense Value</th>
+            </tr>
+          </thead>
+          <tbody >
+          
+          </tbody>
+        </table>
+ <!-- <div class="aboutExpenses">
           <div class="titles">
             <h4>Expense Title</h4>
             <h4>Expense Value</h4>
           </div>
+          </div> -->
         </div>
       </div>
     </section>
+  
+    <!-- <table >
+      <thead >
+        <tr class="tr">
+          <th class="title">Title</th>
+          <th class="title">Amount</th>
+        </tr>
+      </thead>
+      <tbody >
+      
+      </tbody>
+    </table>
+     -->
     <script src="app.js"></script>
   </body>
 </html>

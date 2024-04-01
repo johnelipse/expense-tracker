@@ -139,6 +139,12 @@ body {
   gap: 6rem;
 }
 
+.aboutTheExpenses {
+  display: flex;
+  gap: 13rem;
+  margin-top: 1rem;
+}
+
 @media (max-width: 920px) {
   body {
     padding: 1rem;
@@ -540,4 +546,39 @@ body {
     display: flex;
     gap: 6rem;
   }
+}
+table {
+  padding: 1px 20px;
+  width: 50%;
+  height: 5rem;
+  border: 1px solid black;
+}
+table thead {
+  border-bottom: 1px solid black;
+  background-color: green;
+}
+table thead tr {
+  padding: 10px;
+  border-bottom: greenyellow 1px solid;
+}
+table tr {
+  border: 1px solid black;
+}
+table tbody {
+  padding: 0rem 1rem;
+}
+table tbody td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  background-color: red;
+  text-align: center;
+  margin-left: 2rem;
+}
+table tbody tr {
+  border-collapse: collapse;
+  border-bottom: greenyellow 1px solid;
+}
+
+table {
+  border-collapse: collapse;
 }/*# sourceMappingURL=style.css.map */
