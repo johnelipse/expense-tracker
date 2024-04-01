@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  padding: 1rem;
+  padding-left: 7rem;
+}
+
+.section-heading h1 {
+  font-size: 1.5rem;
+  color: #00a5ba;
+}
+
+.section-content {
+  margin-top: 1rem;
+}
+.section-content .section-income {
+  display: flex;
+  gap: 4rem;
+  margin-top: 1rem;
+}
+.section-content .div-form {
+  padding: 1rem;
+  display: flex;
+  padding-left: 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 40%;
+  border: 1px solid green;
+}
+.section-content .div-form input {
+  padding: 0.5rem;
+  width: 88%;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  outline: none;
+  border: 1px solid green;
+}
+.section-content .div-form input:focus {
+  outline: none;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+.section-content .div-form .btn-1 {
+  padding: 0.5rem 1rem;
+  border: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 400;
+}
+.section-content .div-form .btn-1:hover {
+  transition: 0.5s;
+}
+.section-content .div-form .calculateBtn {
+  border: 1.2px solid green;
+  color: green;
+}
+.section-content .div-form .calculateBtn:hover {
+  background-color: green;
+  color: white;
+}
+.section-content .div-form .resetBtn {
+  border: 1px solid #00a5ba;
+  color: #00a5ba;
+  margin-left: 0.5rem;
+}
+.section-content .div-form .resetBtn:hover {
+  background-color: #00a5ba;
+  color: white;
+}
+.section-content .div-calculations {
+  display: flex;
+  gap: 6rem;
+}
+.section-content .div-calculations .income {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.section-content .div-calculations .income .bx {
+  font-size: 5rem;
+  color: #00a5ba;
+}
+.section-content .section-expenses {
+  display: flex;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+.section-content .section-expenses .division-expenses {
+  padding: 1rem;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 40%;
+  border: 1px solid red;
+}
+.section-content .section-expenses .division-expenses .title {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.section-content .section-expenses .division-expenses input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  width: 88%;
+  outline: none;
+  border: 1px solid red;
+}
+.section-content .section-expenses .division-expenses input:focus {
+  outline: none;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+.section-content .section-expenses .division-expenses .addExpense {
+  padding: 0.5rem 1rem;
+  border: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 400;
+  width: 35%;
+  color: red;
+  border: 1px solid red;
+}
+.section-content .section-expenses .division-expenses .addExpense:hover {
+  background-color: red;
+  color: white;
+  transition: 0.6s;
+}
+.section-content .section-expenses .titles {
+  display: flex;
+  gap: 6rem;
+}
+
+@media (max-width: 920px) {
+  body {
+    padding: 1rem;
+    padding-left: 2rem;
+  }
+  .section-heading h1 {
+    font-size: 1.5rem;
+    color: #00a5ba;
+  }
+  .section-content {
+    margin-top: 1rem;
+  }
+  .section-content .section-income {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  .section-content .div-form {
+    padding: 1rem;
+    display: flex;
+    padding-left: 2rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 45%;
+    border: 1px solid green;
+  }
+  .section-content .div-form input {
+    padding: 0.5rem;
+    width: 88%;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    outline: none;
+    border: 1px solid green;
+  }
+  .section-content .div-form input:focus {
+    outline: none;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  }
+  .section-content .div-form .btn-1 {
+    padding: 0.5rem 0.5rem;
+    border: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 400;
+  }
+  .section-content .div-form .btn-1:hover {
+    transition: 0.5s;
+  }
+  .section-content .div-form .calculateBtn {
+    border: 1.2px solid green;
+    color: green;
+  }
+  .section-content .div-form .calculateBtn:hover {
+    background-color: green;
+    color: white;
+  }
+  .section-content .div-form .resetBtn {
+    border: 1px solid #00a5ba;
+    color: #00a5ba;
+    margin-left: 0.5rem;
+  }
+  .section-content .div-form .resetBtn:hover {
+    background-color: #00a5ba;
+    color: white;
+  }
+  .section-content .div-calculations {
+    display: flex;
+    gap: 4rem;
+  }
+  .section-content .div-calculations .income {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .section-content .div-calculations .income .bx {
+    font-size: 5rem;
+    color: #00a5ba;
+  }
+  .section-content .section-expenses {
+    display: flex;
+    gap: 4rem;
+    margin-top: 3rem;
+  }
+  .section-content .section-expenses .division-expenses {
+    padding: 1rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 40%;
+    border: 1px solid red;
+  }
+  .section-content .section-expenses .division-expenses .title {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  .section-content .section-expenses .division-expenses input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    width: 88%;
+    outline: none;
+    border: 1px solid red;
+  }
+  .section-content .section-expenses .division-expenses input:focus {
+    outline: none;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  }
+  .section-content .section-expenses .division-expenses .addExpense {
+    padding: 0.5rem 0.5rem;
+    border: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 400;
+    width: 55%;
+    color: red;
+    border: 1px solid red;
+  }
+  .section-content .section-expenses .division-expenses .addExpense:hover {
+    background-color: red;
+    color: white;
+    transition: 0.6s;
+  }
+  .section-content .section-expenses .titles {
+    display: flex;
+    gap: 6rem;
+  }
+}
+@media (max-width: 520px) {
+  body {
+    padding: 1rem;
+    padding-left: 1rem;
+  }
+  .section-heading h1 {
+    font-size: 1.5rem;
+    color: #00a5ba;
+  }
+  .section-content {
+    margin-top: 1rem;
+  }
+  .section-content .section-income {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .section-content .div-form {
+    padding: 1rem;
+    display: flex;
+    padding-left: 2rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    border: 1px solid green;
+  }
+  .section-content .div-form input {
+    padding: 0.5rem;
+    width: 88%;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    outline: none;
+    border: 1px solid green;
+  }
+  .section-content .div-form input:focus {
+    outline: none;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  }
+  .section-content .div-form .btn-1 {
+    padding: 0.5rem 1rem;
+    border: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 400;
+  }
+  .section-content .div-form .btn-1:hover {
+    transition: 0.5s;
+  }
+  .section-content .div-form .calculateBtn {
+    border: 1.2px solid green;
+    color: green;
+  }
+  .section-content .div-form .calculateBtn:hover {
+    background-color: green;
+    color: white;
+  }
+  .section-content .div-form .resetBtn {
+    border: 1px solid #00a5ba;
+    color: #00a5ba;
+    margin-left: 0.5rem;
+  }
+  .section-content .div-form .resetBtn:hover {
+    background-color: #00a5ba;
+    color: white;
+  }
+  .section-content .div-calculations {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .section-content .div-calculations .income {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .section-content .div-calculations .income .bx {
+    font-size: 5rem;
+    color: #00a5ba;
+  }
+  .section-content .section-expenses {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 3rem;
+  }
+  .section-content .section-expenses .division-expenses {
+    padding: 1rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    border: 1px solid red;
+  }
+  .section-content .section-expenses .division-expenses .title {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  .section-content .section-expenses .division-expenses input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    width: 88%;
+    outline: none;
+    border: 1px solid red;
+  }
+  .section-content .section-expenses .division-expenses input:focus {
+    outline: none;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  }
+  .section-content .section-expenses .division-expenses .addExpense {
+    padding: 0.5rem 0.5rem;
+    border: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 400;
+    width: 45%;
+    color: red;
+    border: 1px solid red;
+  }
+  .section-content .section-expenses .division-expenses .addExpense:hover {
+    background-color: red;
+    color: white;
+    transition: 0.6s;
+  }
+  .section-content .section-expenses .titles {
+    display: flex;
+    gap: 6rem;
+  }
+}
+@media (max-width: 360px) {
+  body {
+    padding: 1rem;
+    padding-left: 1rem;
+  }
+  .section-heading h1 {
+    font-size: 1.5rem;
+    color: #00a5ba;
+  }
+  .section-content {
+    margin-top: 1rem;
+  }
+  .section-content .section-income {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .section-content .div-form {
+    padding: 1rem;
+    display: flex;
+    padding-left: 2rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    border: 1px solid green;
+  }
+  .section-content .div-form input {
+    padding: 0.5rem;
+    width: 88%;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    outline: none;
+    border: 1px solid green;
+  }
+  .section-content .div-form input:focus {
+    outline: none;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  }
+  .section-content .div-form .btn-1 {
+    padding: 0.5rem 1rem;
+    border: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 400;
+  }
+  .section-content .div-form .btn-1:hover {
+    transition: 0.5s;
+  }
+  .section-content .div-form .calculateBtn {
+    border: 1.2px solid green;
+    color: green;
+  }
+  .section-content .div-form .calculateBtn:hover {
+    background-color: green;
+    color: white;
+  }
+  .section-content .div-form .resetBtn {
+    border: 1px solid #00a5ba;
+    color: #00a5ba;
+    margin-left: 0.5rem;
+  }
+  .section-content .div-form .resetBtn:hover {
+    background-color: #00a5ba;
+    color: white;
+  }
+  .section-content .div-calculations {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .section-content .div-calculations .income {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .section-content .div-calculations .income .bx {
+    font-size: 5rem;
+    color: #00a5ba;
+  }
+  .section-content .section-expenses {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 3rem;
+  }
+  .section-content .section-expenses .division-expenses {
+    padding: 1rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    border: 1px solid red;
+  }
+  .section-content .section-expenses .division-expenses .title {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  .section-content .section-expenses .division-expenses input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    width: 88%;
+    outline: none;
+    border: 1px solid red;
+  }
+  .section-content .section-expenses .division-expenses input:focus {
+    outline: none;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  }
+  .section-content .section-expenses .division-expenses .addExpense {
+    padding: 0.5rem 0.5rem;
+    border: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 400;
+    width: 45%;
+    color: red;
+    border: 1px solid red;
+  }
+  .section-content .section-expenses .division-expenses .addExpense:hover {
+    background-color: red;
+    color: white;
+    transition: 0.6s;
+  }
+  .section-content .section-expenses .titles {
+    display: flex;
+    gap: 6rem;
+  }
+}/*# sourceMappingURL=style.css.map */

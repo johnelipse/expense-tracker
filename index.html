@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Manager</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="section-heading">
+      <h1>Welcome, let's help you track your expenses.</h1>
+    </div>
+    <section class="section-content">
+      <h1>EXPENSE TRACKER</h1>
+      <div class="section-income">
+        <div class="div-form">
+          <h3>Please Enter Your Income</h3>
+          <h5>Click reset to reset income to zero (0).</h5>
+          <input type="number" placeholder="Enter Amount" />
+          <div class="btns">
+            <button class="calculateBtn btn-1" id="calculateBtn">
+              Calculate
+            </button>
+            <button class="resetBtn btn-1" id="resetBtn">Reset</button>
+          </div>
+        </div>
+        <div class="div-calculations">
+          <div class="income">
+            <h3>INCOME</h3>
+            <i class="bx bx-money"></i>
+            <h1 id="income">0</h1>
+          </div>
+          <div class="income">
+            <h3>EXPENSES</h3>
+            <i class="bx bxs-credit-card"></i>
+            <h1 id="expense">0</h1>
+          </div>
+          <div class="income">
+            <h3>BALANCE</h3>
+            <i class="bx bx-pound"></i>
+            <h1 id="balance">0</h1>
+          </div>
+        </div>
+      </div>
+      <div class="section-expenses">
+        <div class="division-expenses">
+          <div class="title">
+            <label for="text">Please Enter Your Expense Title</label>
+            <input type="text" placeholder="Enter expense Title" />
+          </div>
+          <div class="title">
+            <label for="text">Please Enter Your Expense Amount</label>
+            <input type="number" placeholder="Enter expense Amount" />
+          </div>
+          <button id="addExpense" class="addExpense">Add Expense</button>
+        </div>
+        <div class="aboutExpenses">
+          <div class="titles">
+            <h4>Expense Title</h4>
+            <h4>Expense Value</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
