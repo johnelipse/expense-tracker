@@ -134,7 +134,13 @@ body {
   color: white;
   transition: 0.6s;
 }
-.section-content .section-expenses .titles {
+.section-content .section-expenses .title-1 {
+  display: flex;
+  gap: 9rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+.section-content .section-expenses .title-2 {
   display: flex;
   gap: 6rem;
 }
@@ -272,9 +278,9 @@ body {
     color: white;
     transition: 0.6s;
   }
-  .section-content .section-expenses .titles {
+  .section-content .section-expenses .title-1 {
     display: flex;
-    gap: 6rem;
+    gap: 9rem;
   }
 }
 @media (max-width: 520px) {
@@ -407,9 +413,14 @@ body {
     color: white;
     transition: 0.6s;
   }
-  .section-content .section-expenses .titles {
+  .section-content .section-expenses .major-div {
     display: flex;
-    gap: 6rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-content .section-expenses .title-1 {
+    display: flex;
+    gap: 7.5rem;
   }
 }
 @media (max-width: 360px) {
@@ -542,43 +553,12 @@ body {
     color: white;
     transition: 0.6s;
   }
-  .section-content .section-expenses .titles {
+  .section-content .section-expenses .title-1 {
+    display: flex;
+    gap: 8rem;
+  }
+  .section-content .section-expenses .title-2 {
     display: flex;
     gap: 6rem;
   }
-}
-table {
-  padding: 1px 20px;
-  width: 50%;
-  height: 5rem;
-  border: 1px solid black;
-}
-table thead {
-  border-bottom: 1px solid black;
-  background-color: green;
-}
-table thead tr {
-  padding: 10px;
-  border-bottom: greenyellow 1px solid;
-}
-table tr {
-  border: 1px solid black;
-}
-table tbody {
-  padding: 0rem 1rem;
-}
-table tbody td {
-  border-collapse: collapse;
-  border: 1px solid black;
-  background-color: red;
-  text-align: center;
-  margin-left: 2rem;
-}
-table tbody tr {
-  border-collapse: collapse;
-  border-bottom: greenyellow 1px solid;
-}
-
-table {
-  border-collapse: collapse;
 }/*# sourceMappingURL=style.css.map */

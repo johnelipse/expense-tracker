@@ -11,48 +11,69 @@ const titleSpace = document.querySelector("#titleSpace");
 const amountTwo = document.querySelector("#amountTwo");
 const aboutExpenses = document.querySelector(".aboutExpenses");
 const expense = document.querySelector("#expense");
-const tr = document.querySelector("tbody");
-console.log(tr);
+// const tr = document.querySelector("tbody");
+// console.log(tr);
 console.log(expense);
 // console.log(titleSpace,amountTwo,aboutExpenses);
 const expenses = [];
+const incomeArray=[];
+const expenseArray=[];
+console.log(expenses);
 sectionIncome.addEventListener("submit", function (e) {
   e.preventDefault();
-  // console.log("Button Clicked");
   const amount = amountValue.value;
-  // console.log(amount);
-  incomeText.innerText = amount;
-  amountValue.value = "";
-  // console.log(amount);
+  const newAmount = parseInt(amount);
+  console.log(typeof(newAmount));
+  incomeArray.push(newAmount);
+  console.log(incomeArray); 
+  const sumOfIncome = incomeArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+  console.log(sumOfIncome);   
+  incomeText.innerText = sumOfIncome;
 });
 resetBtn.addEventListener("click", function () {
   console.log("clicked");
-  amountValue.value = "0";
-  incomeText.innerText = amountValue.value;
+  amountValue.value = ""; 
+  // incomeText.innerText = "0"; 
 });
+
+// resetBtn.addEventListener("click", function () {
+//   console.log("clicked");
+   
+//   // incomeText.innerText = amountValue.value;
+// });
 divisionExpenses.addEventListener("submit", function (e) {
   e.preventDefault();
-  const expenseValue = amountTwo.value;
-  expense.innerText = expenseValue;
+ const expenseData = amountTwo.value;
+  const newExpenseData = parseInt(expenseData);
+  console.log(typeof(newExpenseData));
+  expenseArray.push(newExpenseData);
+  console.log(expenseArray); 
+  const sumOfExpenses = expenseArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+  console.log(sumOfExpenses);   
+  expense.innerText = sumOfExpenses;
   const expenseDescription = {
     name: titleSpace.value,
     value: amountTwo.value,
   };
   expenses.push(expenseDescription);
-  console.log(expenses);
-  amountTwo.value = "";
-  const titleDetails = titleSpace.value;
-  // const amountDetails=amountTwo.value;
-  expenses.forEach((expense) => {
-    const expenseHtml = ` <tr class="tr">
-    <td class="title">${titleDetails}</td>
-    <td class="title">${expenseValue}</td>
-  </tr>`;
-    tr.insertAdjacentHTML("beforeend", expenseHtml);
-  });
+
+
+  let allExpenseHtml = "";
+
+expenses.forEach((exp) => {
+  const expenseHtml = `
+    <div class="title-1">
+      <h4>Expense: ${exp.name}</h4>
+      <h4>Amount: ${exp.value}</h4>
+    </div>
+  `;
+  
+  allExpenseHtml += expenseHtml;
 });
 
-// divisionExpenses.addEventListener("submit", function () {
-//   const titleDetails = titleSpace.value;
-//   console.log(titleDetails);
-// });
+aboutExpenses.innerHTML = allExpenseHtml;
+
+  amountTwo.value = "";
+  titleSpace.value = "";
+});
+
