@@ -30,6 +30,7 @@ sectionIncome.addEventListener("submit", function (e) {
   const sumOfIncome = incomeArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
   console.log(sumOfIncome);   
   incomeText.innerText = sumOfIncome;
+   amountValue.value = ""; 
   updateBalance()
 });
 resetBtn.addEventListener("click", function () {
