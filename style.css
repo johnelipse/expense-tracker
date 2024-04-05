@@ -136,19 +136,37 @@ body {
 }
 .section-content .section-expenses .title-1 {
   display: flex;
-  gap: 12rem;
+  gap: 10rem;
   margin-top: 1rem;
   color: red;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 .section-content .section-expenses .title-2 {
   display: flex;
-  gap: 6rem;
+  align-items: center;
+  justify-content: center;
+  gap: 9rem;
 }
 
 .aboutTheExpenses {
   display: flex;
   gap: 13rem;
   margin-top: 1rem;
+}
+
+.aboutExpenses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.major-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (max-width: 920px) {

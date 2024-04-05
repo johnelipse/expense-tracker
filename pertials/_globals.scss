@@ -134,14 +134,18 @@ body {
     }
     .title-1 {
       display: flex;
-      gap: 12rem;
+      gap: 10rem;
       margin-top: 1rem;
       color: red;
-      // align-items: center;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
     }
     .title-2 {
       display: flex;
-      gap: 6rem;
+      align-items: center;
+      justify-content: center;
+      gap: 9rem;
     }
   }
 }
@@ -150,9 +154,19 @@ body {
   gap: 13rem;
   margin-top: 1rem;
 }
-// #expense{
-//   color: red;
-// }
+.aboutExpenses{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+.major-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  // gap: 1.5rem;
+}
 @media (max-width: 920px) {
   body {
     padding: 1rem;
