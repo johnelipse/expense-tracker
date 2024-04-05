@@ -11,81 +11,103 @@ const titleSpace = document.querySelector("#titleSpace");
 const amountTwo = document.querySelector("#amountTwo");
 const aboutExpenses = document.querySelector(".aboutExpenses");
 const expense = document.querySelector("#expense");
-const balanceText=document.querySelector("#balance")
+const balanceText = document.querySelector("#balance");
 // const tr = document.querySelector("tbody");
 // console.log(tr);
-console.log(expense);
+// console.log(expense);
 // console.log(titleSpace,amountTwo,aboutExpenses);
 const expenses = [];
-const incomeArray=[];
-const expenseArray=[];
-console.log(expenses);
+const incomeArray = [];
+
+// console.log(incomeArray);
+
+const expenseArray = [];
+// console.log(expenses);
 sectionIncome.addEventListener("submit", function (e) {
   e.preventDefault();
   const amount = amountValue.value;
   const newAmount = parseInt(amount);
-  console.log(typeof(newAmount));
+  // console.log(typeof newAmount);
   incomeArray.push(newAmount);
-  console.log(incomeArray); 
-  const sumOfIncome = incomeArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-  console.log(sumOfIncome);   
+  // console.log(incomeArray);
+  const sumOfIncome = incomeArray.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+  // console.log(sumOfIncome);
   incomeText.innerText = sumOfIncome;
-   amountValue.value = ""; 
-  updateBalance()
+  incomeText.style.color = "green";
+  amountValue.value = "";
+  updateBalance();
 });
-resetBtn.addEventListener("click", function () {
-  console.log("clicked");
-  amountValue.value = ""; 
-  // incomeText.innerText = "0"; 
+resetBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  incomeText.innerText = "0";
+  updateBalance();
 });
 
-// resetBtn.addEventListener("click", function () {
-//   console.log("clicked");
-   
-//   // incomeText.innerText = amountValue.value;
-// });
 divisionExpenses.addEventListener("submit", function (e) {
   e.preventDefault();
- const expenseData = amountTwo.value;
-  const newExpenseData = parseInt(expenseData);
-  console.log(typeof(newExpenseData));
+  const expenseData = amountTwo.value;
+    const newExpenseData = parseInt(expenseData);
   expenseArray.push(newExpenseData);
-  console.log(expenseArray); 
-  const sumOfExpenses = expenseArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-  console.log(sumOfExpenses);   
+  console.log(expenseArray);
+  const sumOfExpenses = expenseArray.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+  console.log(sumOfExpenses);
+  expense.style.color="red"
   expense.innerText = sumOfExpenses;
+  // sumOfExpenses.style.color="red"
   const expenseDescription = {
     name: titleSpace.value,
     value: amountTwo.value,
   };
   expenses.push(expenseDescription);
 
-
   let allExpenseHtml = "";
 
-expenses.forEach((exp) => {
-  const expenseHtml = `
+  expenses.forEach((exp) => {
+    const expenseHtml = `
     <div class="title-1">
       <h4>${exp.name}</h4>
       <h4>${exp.value}</h4>
     </div>
   `;
-  
-  allExpenseHtml += expenseHtml;
-});
 
-aboutExpenses.innerHTML = allExpenseHtml;
+    allExpenseHtml += expenseHtml;
+  });
 
+  aboutExpenses.innerHTML = allExpenseHtml;
   amountTwo.value = "";
   titleSpace.value = "";
-  updateBalance()
+  updateBalance();
 });
 function updateBalance() {
-  const sumOfIncome = incomeArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-  const sumOfExpenses = expenseArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+  const sumOfIncome = incomeArray.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+  const sumOfExpenses = expenseArray.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
   const balance = sumOfIncome - sumOfExpenses;
   balanceText.innerText = balance;
-  console.log(balance);
-}
-updateBalance()
 
+  function changeColor() {
+    if (balance === 0) {
+      balanceText.style.color = "black";
+    } else if (balance > 0) {
+      balanceText.style.color = "green";
+    } else {
+      balanceText.style.color = "red";
+    }
+  }
+  changeColor();
+}
+updateBalance();
+// if(expense>0){
+//   expense.style.color="red"
+// }

@@ -136,6 +136,7 @@ body {
       display: flex;
       gap: 12rem;
       margin-top: 1rem;
+      color: red;
       // align-items: center;
     }
     .title-2 {
@@ -149,6 +150,9 @@ body {
   gap: 13rem;
   margin-top: 1rem;
 }
+// #expense{
+//   color: red;
+// }
 @media (max-width: 920px) {
   body {
     padding: 1rem;

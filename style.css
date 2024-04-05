@@ -138,6 +138,7 @@ body {
   display: flex;
   gap: 12rem;
   margin-top: 1rem;
+  color: red;
 }
 .section-content .section-expenses .title-2 {
   display: flex;
