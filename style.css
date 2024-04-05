@@ -149,7 +149,9 @@ body {
 }
 
 .aboutExpenses {
+  padding-left: 1rem;
   text-align: center;
+  padding-right: 1rem;
   text-align: end;
 }
 
