@@ -12,6 +12,8 @@ const amountTwo = document.querySelector("#amountTwo");
 const aboutExpenses = document.querySelector(".aboutExpenses");
 const expense = document.querySelector("#expense");
 const balanceText = document.querySelector("#balance");
+const refeshBtn = document.querySelector("#refeshBtn");
+console.log(refeshBtn);
 // const tr = document.querySelector("tbody");
 // console.log(tr);
 // console.log(expense);
@@ -49,7 +51,7 @@ resetBtn.addEventListener("click", function (e) {
 divisionExpenses.addEventListener("submit", function (e) {
   e.preventDefault();
   const expenseData = amountTwo.value;
-    const newExpenseData = parseInt(expenseData);
+  const newExpenseData = parseInt(expenseData);
   expenseArray.push(newExpenseData);
   console.log(expenseArray);
   const sumOfExpenses = expenseArray.reduce(
@@ -57,7 +59,7 @@ divisionExpenses.addEventListener("submit", function (e) {
     0
   );
   console.log(sumOfExpenses);
-  expense.style.color="red"
+  expense.style.color = "red";
   expense.innerText = sumOfExpenses;
   // sumOfExpenses.style.color="red"
   const expenseDescription = {
@@ -108,6 +110,6 @@ function updateBalance() {
   changeColor();
 }
 updateBalance();
-// if(expense>0){
-//   expense.style.color="red"
-// }
+refeshBtn.addEventListener("click", function () {
+  window.location.reload();
+});
